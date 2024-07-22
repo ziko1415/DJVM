@@ -1,6 +1,6 @@
 // Package deej provides a machine-side client that pairs with an Arduino
 // chip to form a tactile, physical volume control system/
-package deej
+package DJVM
 
 import (
 	"errors"
@@ -9,13 +9,13 @@ import (
 
 	"go.uber.org/zap"
 
-	"github.com/omriharel/deej/pkg/deej/util"
+	""
 )
 
 const (
 
 	// when this is set to anything, deej won't use a tray icon
-	envNoTray = "DEEJ_NO_TRAY_ICON"
+	envNoTray = "DJVM_NO_TRAY_ICON"
 )
 
 // Deej is the main entity managing access to all sub-components
@@ -32,8 +32,8 @@ type Deej struct {
 }
 
 // NewDeej creates a Deej instance
-func NewDeej(logger *zap.SugaredLogger, verbose bool) (*Deej, error) {
-	logger = logger.Named("deej")
+func NewDeej(logger *zap.SugaredLogger, verbose bool) (*DJVM, error) {
+	logger = logger.Named("DJVM")
 
 	notifier, err := NewToastNotifier(logger)
 	if err != nil {
@@ -77,13 +77,13 @@ func NewDeej(logger *zap.SugaredLogger, verbose bool) (*Deej, error) {
 
 	d.sessions = sessions
 
-	logger.Debug("Created deej instance")
+	logger.Debug("Created DJVM instance")
 
 	return d, nil
 }
 
 // Initialize sets up components and starts to run in the background
-func (d *Deej) Initialize() error {
+func (d *DJVM) Initialize() error {
 	d.logger.Debug("Initializing")
 
 	// load the config for the first time
@@ -116,16 +116,16 @@ func (d *Deej) Initialize() error {
 }
 
 // SetVersion causes deej to add a version string to its tray menu if called before Initialize
-func (d *Deej) SetVersion(version string) {
+func (d *DJVM) SetVersion(version string) {
 	d.version = version
 }
 
 // Verbose returns a boolean indicating whether deej is running in verbose mode
-func (d *Deej) Verbose() bool {
+func (d *DJVM) Verbose() bool {
 	return d.verbose
 }
 
-func (d *Deej) setupInterruptHandler() {
+func (d *DJVM) setupInterruptHandler() {
 	interruptChannel := util.SetupCloseHandler()
 
 	go func() {
@@ -135,7 +135,7 @@ func (d *Deej) setupInterruptHandler() {
 	}()
 }
 
-func (d *Deej) run() {
+func (d *DJVM) run() {
 	d.logger.Info("Run loop starting")
 
 	// watch the config file for changes
@@ -174,7 +174,7 @@ func (d *Deej) run() {
 	d.logger.Debug("Stop channel signaled, terminating")
 
 	if err := d.stop(); err != nil {
-		d.logger.Warnw("Failed to stop deej", "error", err)
+		d.logger.Warnw("Failed to stop DJVM", "error", err)
 		os.Exit(1)
 	} else {
 		// exit with 0
@@ -182,12 +182,12 @@ func (d *Deej) run() {
 	}
 }
 
-func (d *Deej) signalStop() {
+func (d *DJVM) signalStop() {
 	d.logger.Debug("Signalling stop channel")
 	d.stopChannel <- true
 }
 
-func (d *Deej) stop() error {
+func (d *DJVM) stop() error {
 	d.logger.Info("Stopping")
 
 	d.config.StopWatchingConfigFile()
