@@ -1,4 +1,4 @@
-package deej
+package DJVM
 
 import (
 	"os"
@@ -8,7 +8,7 @@ import (
 	"go.uber.org/zap"
 
 	"github.com/omriharel/deej/pkg/deej/icon"
-	"github.com/omriharel/deej/pkg/deej/util"
+	"https://github.com/ziko1415/DJVM/tree/main/pkg/utilities"
 )
 
 // Notifier provides generic notification sending
@@ -35,7 +35,7 @@ func NewToastNotifier(logger *zap.SugaredLogger) (*ToastNotifier, error) {
 func (tn *ToastNotifier) Notify(title string, message string) {
 
 	// we need to unpack deej.ico somewhere to remain portable. we already have it as bytes so it should be fine
-	appIconPath := filepath.Join(os.TempDir(), "deej.ico")
+	appIconPath := filepath.Join(os.TempDir(), ".ico")
 
 	if !util.FileExists(appIconPath) {
 		tn.logger.Debugw("Deej icon file missing, creating", "path", appIconPath)
@@ -45,7 +45,7 @@ func (tn *ToastNotifier) Notify(title string, message string) {
 			tn.logger.Errorw("Failed to create toast notification icon", "error", err)
 		}
 
-		if _, err = f.Write(icon.DeejLogo); err != nil {
+		if _, err = f.Write(icon.DJVMLogo); err != nil {
 			tn.logger.Errorw("Failed to write toast notification icon", "error", err)
 		}
 
