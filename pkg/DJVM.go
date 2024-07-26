@@ -19,7 +19,7 @@ const (
 )
 
 // Deej is the main entity managing access to all sub-components
-type Deej struct {
+type DJVM struct {
 	logger   *zap.SugaredLogger
 	notifier Notifier
 	config   *CanonicalConfig
@@ -47,7 +47,7 @@ func NewDeej(logger *zap.SugaredLogger, verbose bool) (*DJVM, error) {
 		return nil, fmt.Errorf("create new Config: %w", err)
 	}
 
-	d := &Deej{
+	d := &DJVM{
 		logger:      logger,
 		notifier:    notifier,
 		config:      config,
