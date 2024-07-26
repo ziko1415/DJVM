@@ -1,4 +1,4 @@
-package deej
+package DJVM
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ import (
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 
-	"github.com/omriharel/deej/pkg/deej/util"
+	""
 )
 
 // CanonicalConfig provides application-wide access to configuration fields,
@@ -54,7 +54,7 @@ const (
 	configKeyBaudRate            = "baud_rate"
 	configKeyNoiseReductionLevel = "noise_reduction"
 
-	defaultCOMPort  = "COM4"
+	defaultCOMPort  = "COM14"
 	defaultBaudRate = 9600
 )
 
