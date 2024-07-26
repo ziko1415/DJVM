@@ -1,11 +1,11 @@
-package deej
+package DJVM
 
 import (
 	"fmt"
 	"path/filepath"
 	"time"
 
-	"github.com/omriharel/deej/pkg/deej/util"
+	"https://github.com/ziko1415/DJVM/tree/main/pkg/utilities"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
@@ -16,7 +16,7 @@ const (
 	buildTypeRelease = "release"
 
 	logDirectory = "logs"
-	logFilename  = "deej-latest-run.log"
+	logFilename  = "DJVM-latest-run.log"
 )
 
 // NewLogger provides a logger instance for the whole program
