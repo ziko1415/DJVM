@@ -1,4 +1,4 @@
-package deej
+package DJVM
 
 import (
 	"bytes"
@@ -13,15 +13,14 @@ import (
 )
 
 const (
-	crashlogFilename        = "deej-crash-%s.log"
+	crashlogFilename        = "DJVM-crash-%s.log"
 	crashlogTimestampFormat = "2006.01.02-15.04.05"
 
 	crashMessage = `-----------------------------------------------------------------
-                        deej crashlog
+                        DJVM crashlog
 -----------------------------------------------------------------
-Unfortunately, deej has crashed. This really shouldn't happen!
-If you've just encountered this, please contact @omriharel and attach this error log.
-You can also join the deej Discord server at https://discord.gg/nf88NJu.
+Unfortunately, DJVM has crashed. This really shouldn't happen!
+If you've just encountered this, please contact @ziko1415 and attach this error log.
 -----------------------------------------------------------------
 Time: %s
 Panic occurred: %s
@@ -31,7 +30,7 @@ Stack trace:
 `
 )
 
-func (d *Deej) recoverFromPanic() {
+func (d *DJVM) recoverFromPanic() {
 	r := recover()
 
 	if r == nil {
