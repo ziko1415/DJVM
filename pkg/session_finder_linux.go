@@ -1,4 +1,4 @@
-package deej
+package DJVM
 
 import (
 	"fmt"
@@ -138,7 +138,7 @@ func (sf *paSessionFinder) enumerateAndAddSessions(sessions *[]Session) error {
 			continue
 		}
 
-		// create the deej session object
+		// create the DJVM session object
 		newSession := newPASession(sf.sessionLogger, sf.client, info.SinkInputIndex, info.Channels, name.String())
 
 		// add it to our slice
