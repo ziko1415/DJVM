@@ -7,7 +7,7 @@ import (
 	"github.com/gen2brain/beeep"
 	"go.uber.org/zap"
 
-	"github.com/omriharel/deej/pkg/deej/icon"
+	"https://github.com/ziko1415/DJVM/tree/main/pkg/icon"
 	"https://github.com/ziko1415/DJVM/tree/main/pkg/utilities"
 )
 
