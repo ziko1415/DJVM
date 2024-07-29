@@ -13,15 +13,15 @@ import (
 	"github.com/jacobsa/go-serial/serial"
 	"go.uber.org/zap"
 
-	"github.com/omriharel/deej/pkg/deej/util"
+	"https://github.com/ziko1415/DJVM/tree/main/pkg/utilities"
 )
 
-// SerialIO provides a deej-aware abstraction layer to managing serial I/O
+// SerialIO provides a DJVM-aware abstraction layer to managing serial I/O
 type SerialIO struct {
 	comPort  string
 	baudRate uint
 
-	deej   *Deej
+	DJVM   *DJVM
 	logger *zap.SugaredLogger
 
 	stopChannel chan bool
@@ -43,13 +43,13 @@ type SliderMoveEvent struct {
 
 var expectedLinePattern = regexp.MustCompile(`^\d{1,4}(\|\d{1,4})*\r\n$`)
 
-// NewSerialIO creates a SerialIO instance that uses the provided deej
+// NewSerialIO creates a SerialIO instance that uses the provided DJVM
 // instance's connection info to establish communications with the arduino chip
-func NewSerialIO(deej *Deej, logger *zap.SugaredLogger) (*SerialIO, error) {
+func NewSerialIO(deej *DJVM, logger *zap.SugaredLogger) (*SerialIO, error) {
 	logger = logger.Named("serial")
 
 	sio := &SerialIO{
-		deej:                deej,
+		DJVM:                DJVM,
 		logger:              logger,
 		stopChannel:         make(chan bool),
 		connected:           false,
@@ -83,7 +83,7 @@ func (sio *SerialIO) Start() error {
 	}
 
 	sio.connOptions = serial.OpenOptions{
-		PortName:        sio.deej.config.ConnectionInfo.COMPort,
+		PortName:        sio.DJVM.config.ConnectionInfo.COMPort,
 		BaudRate:        uint(sio.deej.config.ConnectionInfo.BaudRate),
 		DataBits:        8,
 		StopBits:        1,
@@ -280,7 +280,7 @@ func (sio *SerialIO) handleLine(logger *zap.SugaredLogger, line string) {
 		}
 
 		// check if it changes the desired state (could just be a jumpy raw slider value)
-		if util.SignificantlyDifferent(sio.currentSliderPercentValues[sliderIdx], normalizedScalar, sio.deej.config.NoiseReductionLevel) {
+		if util.SignificantlyDifferent(sio.currentSliderPercentValues[sliderIdx], normalizedScalar, sio.DJVM.config.NoiseReductionLevel) {
 
 			// if it does, update the saved value and create a move event
 			sio.currentSliderPercentValues[sliderIdx] = normalizedScalar
