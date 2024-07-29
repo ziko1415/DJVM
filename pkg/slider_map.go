@@ -1,4 +1,4 @@
-package deej
+package DJVM
 
 import (
 	"fmt"
