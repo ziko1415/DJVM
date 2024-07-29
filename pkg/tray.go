@@ -3,7 +3,7 @@ package DJVM
 import (
 	"github.com/getlantern/systray"
 
-	"github.com/omriharel/deej/pkg/deej/icon"
+	"https://github.com/ziko1415/DJVM/tree/main/pkg/icon"
 	"https://github.com/ziko1415/DJVM/tree/main/pkg/utilities"
 )
 
@@ -13,9 +13,9 @@ func (d *DJVM) initializeTray(onDone func()) {
 	onReady := func() {
 		logger.Debug("Tray instance ready")
 
-		systray.SetTemplateIcon(icon.DeejLogo, icon.DeejLogo)
-		systray.SetTitle("deej")
-		systray.SetTooltip("deej")
+		systray.SetTemplateIcon(icon.DJVMLogo, icon.DJVMLogo)
+		systray.SetTitle("DJVM")
+		systray.SetTooltip("DJVM")
 
 		editConfig := systray.AddMenuItem("Edit configuration", "Open config file with notepad")
 		editConfig.SetIcon(icon.EditConfig)
