@@ -1,13 +1,13 @@
-package deej
+package DJVM
 
 import (
 	"github.com/getlantern/systray"
 
 	"github.com/omriharel/deej/pkg/deej/icon"
-	"github.com/omriharel/deej/pkg/deej/util"
+	"https://github.com/ziko1415/DJVM/tree/main/pkg/utilities"
 )
 
-func (d *Deej) initializeTray(onDone func()) {
+func (d *DJVM) initializeTray(onDone func()) {
 	logger := d.logger.Named("tray")
 
 	onReady := func() {
@@ -30,7 +30,7 @@ func (d *Deej) initializeTray(onDone func()) {
 		}
 
 		systray.AddSeparator()
-		quit := systray.AddMenuItem("Quit", "Stop deej and quit")
+		quit := systray.AddMenuItem("Quit", "Stop DJVM and quit")
 
 		// wait on things to happen
 		go func() {
@@ -80,7 +80,7 @@ func (d *Deej) initializeTray(onDone func()) {
 	systray.Run(onReady, onExit)
 }
 
-func (d *Deej) stopTray() {
+func (d *DJVM) stopTray() {
 	d.logger.Debug("Quitting tray")
 	systray.Quit()
 }
