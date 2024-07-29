@@ -1,4 +1,4 @@
-package deej
+package DJVM
 
 import (
 	"errors"
@@ -464,8 +464,7 @@ func (sf *wcaSessionFinder) enumerateAndAddProcessSessions(
 				return fmt.Errorf("query session %d pid: %w", sessionIdx, err)
 			}
 
-			// update 2020/08/31: this is also the exact case for UWP applications, so we should no longer override the PID.
-			// it will successfully update whenever we call GetProcessId for e.g. Video.UI.exe, despite the error being non-nil.
+		
 		}
 
 		// get its ISimpleAudioVolume
@@ -481,7 +480,7 @@ func (sf *wcaSessionFinder) enumerateAndAddProcessSessions(
 		// make it useful, again
 		simpleAudioVolume := (*wca.ISimpleAudioVolume)(unsafe.Pointer(dispatch))
 
-		// create the deej session object
+		// create the DJVM session object
 		newSession, err := newWCASession(sf.sessionLogger, audioSessionControl2, simpleAudioVolume, pid, sf.eventCtx)
 		if err != nil {
 
