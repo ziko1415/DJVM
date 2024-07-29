@@ -9,7 +9,7 @@ import (
 	"runtime/debug"
 	"time"
 
-	"github.com/omriharel/deej/pkg/deej/util"
+	"https://github.com/ziko1415/DJVM/tree/main/pkg/utilities"
 )
 
 const (
