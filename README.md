@@ -4,11 +4,6 @@ DJSM is an **open-source hardware volume mixer** for Windows and Linux PCs, that
 
 
 
-
-deej consists of a [lightweight desktop client](#features) written in Go, and an Arduino-based hardware setup that's simple and cheap to build. [**Check out some versions built by members of our community!**](./community.md)
-
-
-
 ![deej](assets/build-3d-annotated.png)
 
 
