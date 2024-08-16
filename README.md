@@ -4,7 +4,7 @@ DJSM is an **open-source hardware volume mixer** for Windows and Linux PCs, that
 
 
 
-![deej](assets/build-3d-annotated.png)
+![DJVM](assets/build-3d-annotated.png)
 
 
 ## Table of contents
