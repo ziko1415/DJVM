@@ -4,7 +4,7 @@ DJVM is an **open-source hardware volume mixer** for Windows and Linux PCs, that
 
 
 
-![DJVM](3d print designs/3d-build.png)
+![DJVM](https://github.com/ziko1415/DJVM/blob/main/3d%20print%20designs/3d-build.png)
 
 
 ## Table of contents
