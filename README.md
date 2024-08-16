@@ -28,7 +28,7 @@ DJSM is an **open-source hardware volume mixer** for Windows and Linux PCs, that
 
 ## Features
 
-deej is written in Go and [distributed](https://github.com/omriharel/deej/releases/latest) as a portable (no installer needed) executable.
+DJVM is written in Go and [distributed](https://github.com/ziko1415/DJVM/releases) as a portable (no installer needed) executable.
 
 - Bind apps to different sliders
   - Bind multiple apps per slider (i.e. one slider for all your games)
