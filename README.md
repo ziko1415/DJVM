@@ -56,7 +56,7 @@ DJVM is written in Go and [distributed](https://github.com/ziko1415/DJVM/release
 
 ### Software
 
-- The code running on the Arduino board is a [C++ program]() constantly writing current slider values over its serial interface
+- The code running on the Arduino board is a [C++ program](https://github.com/ziko1415/DJVM/blob/main/DJVM.ino) constantly writing current slider values over its serial interface
 - The PC runs a lightweight [Go client](./pkg/deej/cmd/main.go) in the background. This client reads the serial stream and adjusts app volumes according to the given configuration file
 
 ## Slider mapping (configuration)
