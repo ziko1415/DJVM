@@ -70,25 +70,28 @@ The config file determines which applications (and devices) are mapped to which 
 It looks like this:
 
 ```yaml
+
 slider_mapping:
-  0: master
-  1: chrome.exe
+  0: valorant.exe
+  1: youtube.exe
   2: spotify.exe
   3:
-    - pathofexile_x64.exe
-    - rocketleague.exe
-  4: discord.exe
+    - forzahorizon5.exe
+    - valorant.exe
+  4: brave.exe
 
 # set this to true if you want the controls inverted (i.e. top is 0%, bottom is 100%)
+# In addition you can  switch the gnd with the vcc.
 invert_sliders: false
 
 # settings for connecting to the arduino board
-com_port: COM4
+com_port: COM14
 baud_rate: 9600
 
 # adjust the amount of signal noise reduction depending on your hardware quality
 # supported values are "low" (excellent hardware), "default" (regular hardware) or "high" (bad, noisy hardware)
 noise_reduction: default
+
 ```
 
 - `master` is a special option to control the master volume of the system _(uses the default playback device)_
