@@ -23,7 +23,6 @@ DJVM is an **open-source hardware volume mixer** for Windows and Linux PCs, that
   - [Requirements](#requirements)
   - [Download and installation](#download-and-installation)
   - [Building from source](#building-from-source)
-- [Community](#community)
 - [License](#license)
 
 ## Features
@@ -53,7 +52,7 @@ DJVM is written in Go and [distributed](https://github.com/ziko1415/DJVM/release
 
 #### Schematic
 
-![Hardware schematic](assets/schematic.png)
+![Hardware schematic]()
 
 ### Software
 
