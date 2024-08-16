@@ -96,8 +96,8 @@ noise_reduction: default
 
 - `master` is a special option to control the master volume of the system _(uses the default playback device)_
 - `mic` is a special option to control your microphone's input level _(uses the default recording device)_
-- `deej.unmapped` is a special option to control all apps that aren't bound to any slider ("everything else")
-- On Windows, `deej.current` is a special option to control whichever app is currently in focus
+- `DJVM.unmapped` is a special option to control all apps that aren't bound to any slider ("everything else")
+- On Windows, `DJVM.current` is a special option to control whichever app is currently in focus
 - On Windows, you can specify a device's full name, i.e. `Speakers (Realtek High Definition Audio)`, to bind that device's level to a slider. This doesn't conflict with the default `master` and `mic` options, and works for both input and output devices.
   - Be sure to use the full device name, as seen in the menu that comes up when left-clicking the speaker icon in the tray menu
 - `system` is a special option on Windows to control the "System sounds" volume in the Windows mixer
@@ -108,17 +108,10 @@ noise_reduction: default
 
 ## Build your own!
 
-Building deej is very simple. You only need a few relatively cheap parts - it's an excellent starter project (and my first Arduino project, personally). Remember that if you need any help or have a question that's not answered here, you can always [join the deej Discord server](https://discord.gg/nf88NJu).
+Building DJVM is very simple. You only need a few relatively cheap parts - it's an excellent starter project.
 
-Build deej for yourself, or as an awesome gift for your gaming buddies!
+Build DJVM for yourself, or as an awesome gift for your gaming and streamer buddies buddies!
 
-### FAQ
-
-I've started a highly focused effort of writing a proper FAQ page for deej, covering many basic and advanced topics.
-
-It is still _very much a work-in-progress_, but I'm happy to [share it in its current state](./docs/faq/faq.md) in hopes that it at least covers some questions you might have.
-
-FAQ feedback in our [community Discord](https://discord.gg/nf88NJu) is strongly encouraged :)
 
 ### Build video
 
@@ -137,7 +130,7 @@ In case you prefer watching to reading, Charles from the [**Tech Always**](https
 
 ### Thingiverse collection
 
-With many different 3D-printed designs being added to our [community showcase](./community.md), it felt right to gather all of them in a Thingiverse collection for you to browse. If you have access to a 3D printer, feel free to use one of the designs in your build.
+
 
 **[Visit our community-created design collection on Thingiverse!](https://thingiverse.com/omriharel/collections/deej)**
 
@@ -168,17 +161,15 @@ With many different 3D-printed designs being added to our [community showcase](.
 
 ### Download and installation
 
-- Head over to the [releases page](https://github.com/omriharel/deej/releases) and download the [latest version](https://github.com/omriharel/deej/releases/latest)'s executable and configuration file (`deej.exe` and `config.yaml`)
+- Head over to the [releases page](https://github.com/ziko1415/DJVM/releases) and download the [latest version](https://github.com/ziko1415/DJVM/releases)'s executable and configuration file (`DJVM.exe` and `config.yaml`)
 - Place them in the same directory anywhere on your machine
-- (Optional, on Windows) Create a shortcut to `deej.exe` and copy it to `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup` to have deej run on boot
+- (Optional, on Windows) Create a shortcut to `DJVM.exe` and copy it to `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup` to have DJVM run on boot
 
 ### Building from source
 
-If you'd rather not download a compiled executable, or want to extend deej or modify it to your needs, feel free to clone the repository and build it yourself. All you need is a Go 1.14 (or above) environment on your machine. If you go this route, make sure to check out the [developer scripts](./pkg/deej/scripts).
+If you'd rather not download a compiled executable, or want to extend deej or modify it to your needs, feel free to clone the repository and build it yourself. All you need is a Go 1.14 (or above) environment on your machine.
 
-Like other Go packages, you can also use the `go get` tool: `go get -u github.com/omriharel/deej`. Please note that the package code now resides in the `pkg/deej` directory, and needs to be imported from there if used inside another project.
-
-If you need any help with this, please [join our Discord server](https://discord.gg/nf88NJu).
+If you need any help with this, please contact me thorugh (beitak.tech@gmail.com) or on instagram(beitak.tech).
 
 
 ## License
