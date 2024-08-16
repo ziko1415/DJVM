@@ -178,23 +178,6 @@ Like other Go packages, you can also use the `go get` tool: `go get -u github.co
 
 If you need any help with this, please [join our Discord server](https://discord.gg/nf88NJu).
 
-## Community
-
-[![Discord](https://img.shields.io/discord/702940502038937667?logo=discord)](https://discord.gg/nf88NJu)
-
-deej is a relatively new project, but a vibrant and awesome community is rapidly growing around it. Come hang out with us in the [deej Discord server](https://discord.gg/nf88NJu), or check out a whole bunch of cool and creative builds made by our members in the [community showcase](./community.md).
-
-The server is also a great place to ask questions, suggest features or report bugs (but of course, feel free to use GitHub if you prefer).
-
-### Donations
-
-If you love deej and want to show your support for this project, you can do so using the link below. Please don't feel obligated to donate - building the project and telling your friends about it goes a very long way! Thank you very much.
-
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/omriharel)
-
-### Contributing
-
-Please see [`docs/CONTRIBUTING.md`](./docs/CONTRIBUTING.md).
 
 ## License
 
