@@ -5,7 +5,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/omriharel/deej/pkg"
+	"github.com/omriharel/DJVM/pkg"
 )
 
 var (
