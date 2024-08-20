@@ -5,7 +5,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/omriharel/deej/pkg/deej"
+	"github.com/omriharel/deej/pkg"
 )
 
 var (
@@ -25,7 +25,7 @@ func init() {
 func main() {
 
 	// first we need a logger
-	logger, err := deej.NewLogger(buildType)
+	logger, err := DJVM.NewLogger(buildType)
 	if err != nil {
 		panic(fmt.Sprintf("Failed to create logger: %v", err))
 	}
@@ -44,9 +44,9 @@ func main() {
 	}
 
 	// create the deej instance
-	d, err := deej.NewDeej(logger, verbose)
+	d, err := DJVM.NewDJVM(logger, verbose)
 	if err != nil {
-		named.Fatalw("Failed to create deej object", "error", err)
+		named.Fatalw("Failed to create DJVM object", "error", err)
 	}
 
 	// if injected by build process, set version info to show up in the tray
@@ -62,6 +62,6 @@ func main() {
 
 	// onwards, to glory
 	if err = d.Initialize(); err != nil {
-		named.Fatalw("Failed to initialize deej", "error", err)
+		named.Fatalw("Failed to initialize DJVM", "error", err)
 	}
 }
