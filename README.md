@@ -41,7 +41,7 @@ DJVM is written in Go and [distributed](https://github.com/ziko1415/DJVM/release
 - Runs from your system tray
 - Helpful notifications to let you know if something isn't working
 
-> **Looking for the older Python version?** It's no longer maintained, but you can always find it in the [`legacy-python` branch](https://github.com/omriharel/deej/tree/legacy-python).
+>
 
 ## How it works
 
@@ -57,7 +57,7 @@ DJVM is written in Go and [distributed](https://github.com/ziko1415/DJVM/release
 ### Software
 
 - The code running on the Arduino board is a [C++ program](https://github.com/ziko1415/DJVM/blob/main/DJVM.ino) constantly writing current slider values over its serial interface
-- The PC runs a lightweight [Go client](./pkg/deej/cmd/main.go) in the background. This client reads the serial stream and adjusts app volumes according to the given configuration file
+- The PC runs a lightweight [Go client](pkg/cmd/main.go) in the background. This client reads the serial stream and adjusts app volumes according to the given configuration file
 
 ## Slider mapping (configuration)
 
