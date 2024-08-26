@@ -48,7 +48,7 @@ DJVM is written in Go and [distributed](https://github.com/ziko1415/DJVM/release
 ### Hardware
 
 - The sliders are connected to 5 (or as many as you like) analog pins on an Arduino Nano/Uno board. They're powered from the board's 5V output (see schematic)
-- The board connects via a USB cable to the PC
+- The board connects via a USB cable to the PC.
 
 #### Schematic
 
@@ -61,11 +61,11 @@ DJVM is written in Go and [distributed](https://github.com/ziko1415/DJVM/release
 
 ## Slider mapping (configuration)
 
-deej uses a simple YAML-formatted configuration file named [`config.yaml`](./config.yaml), placed alongside the deej executable.
+DJVM uses a simple YAML-formatted configuration file named [`config.yaml`](./config.yaml), placed alongside the DJVM executable.
 
 The config file determines which applications (and devices) are mapped to which sliders, and which parameters to use for the connection to the Arduino board, as well as other user preferences.
 
-**This file auto-reloads when its contents are changed, so you can change application mappings on-the-fly without restarting deej.**
+**This file auto-reloads when its contents are changed, so you can change application mappings on-the-fly without restarting DJVM.**
 
 It looks like this:
 
