@@ -115,7 +115,12 @@ Build DJVM for yourself, or as an awesome gift for your gaming and streamer budd
 
 ### Build video
 
-In case you prefer watching to reading, Charles from the [**Tech Always**](https://www.youtube.com/c/TechAlways) YouTube channel has made [**a fantastic video**](https://youtu.be/x2yXbFiiAeI) that covers the basics of building deej for yourself, including parts, costs, assembly and software. I highly recommend checking it out!
+Coming Soon on  beitak_tech.
+
+Here is the link to the channel:
+
+      (https://www.youtube.com/@beitak_tech)
+
 
 ### Bill of Materials
 
@@ -126,17 +131,9 @@ In case you prefer watching to reading, Charles from the [**Tech Always**](https
   - **Important:** make sure to get **linear** sliders, not logarithmic ones! Check the product description
   - You can also use circular knobs if you like
 - Some wires
-- Any kind of box to hold everything together. **You don't need a 3D printer for this project!** It works fantastically with just a piece of cardboard or a shoebox. That being said, if you do have one, read on...
+- Any kind of box to hold everything together. **You don't need a 3D printer for this project!** It works fantastically with just a piece of cardboard or a shoebox.
 
-### Thingiverse collection
-
-
-
-**[Visit our community-created design collection on Thingiverse!](https://thingiverse.com/omriharel/collections/deej)**
-
-> You can also [submit your own](https://discord.gg/nf88NJu) design to be added to the collection. Regardless, if you do upload your design to Thingiverse, _please add a `deej` tag to it so that others can find it more easily_.
-
-
+- 
 ### Build procedure
 
 - Connect everything according to the [schematic](#schematic)
@@ -145,7 +142,7 @@ In case you prefer watching to reading, Charles from the [**Tech Always**](https
   - _Important:_ If you have more or less than 5 sliders, you must edit the sketch to match what you have
 - After flashing, check the serial monitor. You should see a constant stream of values separated by a pipe (`|`) character, e.g. `0|240|1023|0|483|0`
   - When you move a slider, its corresponding value should move between 0 and 1023
-- Congratulations, you're now ready to run the deej executable!
+- Congratulations, you're now ready to run the DJVM executable!
 
 ## How to run
 
