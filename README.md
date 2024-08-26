@@ -141,9 +141,9 @@ In case you prefer watching to reading, Charles from the [**Tech Always**](https
 
 - Connect everything according to the [schematic](#schematic)
 - Test with a multimeter to be sure your sliders are hooked up correctly
-- Flash the Arduino chip with the sketch in [`arduino\deej-5-sliders-vanilla`](./arduino/deej-5-sliders-vanilla/deej-5-sliders-vanilla.ino)
+- Flash the Arduino chip with the sketch in [`DJVM.ino'](DJVM.ino)
   - _Important:_ If you have more or less than 5 sliders, you must edit the sketch to match what you have
-- After flashing, check the serial monitor. You should see a constant stream of values separated by a pipe (`|`) character, e.g. `0|240|1023|0|483`
+- After flashing, check the serial monitor. You should see a constant stream of values separated by a pipe (`|`) character, e.g. `0|240|1023|0|483|0`
   - When you move a slider, its corresponding value should move between 0 and 1023
 - Congratulations, you're now ready to run the deej executable!
 
@@ -157,8 +157,7 @@ In case you prefer watching to reading, Charles from the [**Tech Always**](https
 
 #### Linux
 
-- Install `libgtk-3-dev`, `libappindicator3-dev` and `libwebkit2gtk-4.0-dev` for system tray support. Pre-built Linux binaries aren't currently released, so you'll need to [build from source](#building-from-source). If there's demand for pre-built binaries, please [let me know](https://discord.gg/nf88NJu)!
-
+- Install `libgtk-3-dev`, `libappindicator3-dev` and `libwebkit2gtk-4.0-dev` for system tray support. Pre-built Linux binaries aren't currently released, so you'll need to [build from source](#building-from-source). 
 ### Download and installation
 
 - Head over to the [releases page](https://github.com/ziko1415/DJVM/releases) and download the [latest version](https://github.com/ziko1415/DJVM/releases)'s executable and configuration file (`DJVM.exe` and `config.yaml`)
