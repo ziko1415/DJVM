@@ -52,7 +52,7 @@ DJVM is written in Go and [distributed](https://github.com/ziko1415/DJVM/release
 
 #### Schematic
 
-![Hardware schematic]()
+![Hardware schematic](Schematic.png)
 
 ### Software
 
